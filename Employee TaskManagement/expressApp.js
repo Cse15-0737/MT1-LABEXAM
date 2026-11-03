@@ -99,9 +99,8 @@ app.post("/tasks", (request, response) => {
   tasks.push(newTask);
 
   response.status(201).json({
-    success: true,
-    message: "Task created successfully.",
-    data: newTask,
+    message: "Task added successfully",
+    task: newTask,
   });
 });
 
