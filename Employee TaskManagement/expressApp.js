@@ -55,6 +55,10 @@ app.get("/tasks", (request, response) => {
   response.json({ success: true, data: tasks });
 });
 
+app.get("/task", (request, response) => {
+  response.json({ success: true, data: tasks });
+});
+
 app.get("/tasks/:id", (request, response) => {
   const id = Number(request.params.id);
   const task = tasks.find((item) => item.id === id);
